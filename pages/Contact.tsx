@@ -56,13 +56,17 @@ const Contact: React.FC = () => {
             </div>
             <div className="flex flex-wrap gap-3 shrink-0">
               <a className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-bold hover:bg-primary-dark transition-colors" href="https://youtube.com/@krabelmusicals9930" target="_blank" rel="noopener noreferrer">
-                <span className="material-symbols-outlined text-lg">smart_display</span> YouTube
+                <i className="fa-brands fa-youtube text-lg" /> YouTube
               </a>
               <a className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background-light text-text-light font-bold hover:bg-border-light transition-colors" href="https://www.tiktok.com/@krabelmusicals" target="_blank" rel="noopener noreferrer">
-                <span className="material-symbols-outlined text-lg">music_note</span> TikTok
+                <i className="fa-brands fa-tiktok text-lg" /> TikTok
               </a>
-              <a className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background-light text-text-light font-bold hover:bg-border-light transition-colors" href="https://www.instagram.com/krabelmusicals" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background-light text-text-light font-bold hover:bg-border-light transition-colors" href="https://www.facebook.com/share/1BicmudxNr/" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background-light text-text-light font-bold hover:bg-border-light transition-colors" href="https://www.instagram.com/krabelmusicals" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-instagram text-lg" /> Instagram
+              </a>
+              <a className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background-light text-text-light font-bold hover:bg-border-light transition-colors" href="https://www.facebook.com/share/1BicmudxNr/" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-facebook-f text-lg" /> Facebook
+              </a>
             </div>
           </div>
         </div>
