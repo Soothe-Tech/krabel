@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   return (
@@ -48,28 +49,28 @@ const Home: React.FC = () => {
           <div className="mb-16 flex flex-col gap-4 text-center md:text-left">
             <span className="text-primary font-bold tracking-widest uppercase text-sm">Our Expertise</span>
             <h2 className="text-4xl font-black text-navy-brand md:text-5xl">Professional Services</h2>
-            <p className="text-lg text-text-muted max-w-2xl font-noto">Comprehensive music education and instrument solutions tailored for excellence and personal growth.</p>
+            <p className="text-lg text-text-muted max-w-2xl font-noto">Music education, instrumental training, children's academy programs, workshops, instrument sales, and gospel music mentorship—all under one roof.</p>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <ServiceCard 
               icon="piano" 
               title="Instrumental Training" 
-              desc="Expert tuition in piano, guitar, violin, and drums tailored for all skill levels from beginner to advanced." 
+              desc="Expert tuition in keyboard, violin, vocals, and more. Private, group, and online music classes for all ages." 
             />
             <ServiceCard 
-              icon="groups" 
-              title="Boot Camps" 
-              desc="Intensive music workshops designed to accelerate learning, performance skills, and band dynamics." 
+              icon="child_care" 
+              title="Children's Academy" 
+              desc="Music workshops, boot camps, and reboot camps designed for children and youth talent development." 
             />
             <ServiceCard 
               icon="storefront" 
-              title="Instrument Sales" 
-              desc="High-quality musical instruments and accessories available for purchase at competitive prices." 
+              title="Instruments & Sound Systems" 
+              desc="Sales of all musical instruments, accessories, and sound systems at competitive prices." 
             />
             <ServiceCard 
-              icon="handshake" 
-              title="Mentorship" 
-              desc="Guidance and career counseling for aspiring professional musicians to navigate the industry." 
+              icon="church" 
+              title="Gospel Music Training" 
+              desc="Gospel music-focused training and mentorship. Studio projects and performance coaching." 
             />
           </div>
         </div>
@@ -84,7 +85,7 @@ const Home: React.FC = () => {
                 Why Krabel Musicals?
               </h2>
               <p className="text-lg text-text-muted font-noto leading-relaxed">
-                We combine strict musical discipline with a profound sense of purpose, ensuring our students excel not just as performers, but as leaders.
+                We combine strict musical discipline with a profound sense of purpose. With a strong focus on children and youth development, we ensure our students excel not just as performers, but as confident, excellent, and godly musicians.
               </p>
               <div className="flex flex-col gap-8 pt-4">
                 <CheckItem icon="verified" title="Proven Excellence" desc="Over a decade of raising skilled musicians who excel on local and global stages." />
@@ -136,9 +137,9 @@ const Home: React.FC = () => {
             >
               Enroll Now
             </a>
-            <button className="h-14 min-w-[200px] rounded-xl border-2 border-white/20 px-8 text-lg font-bold text-white hover:bg-white/10 transition-colors">
+            <Link to="/contact" className="h-14 min-w-[200px] rounded-xl border-2 border-white/20 px-8 text-lg font-bold text-white hover:bg-white/10 transition-colors flex items-center justify-center">
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </section>

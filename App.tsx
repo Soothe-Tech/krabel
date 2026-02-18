@@ -98,15 +98,14 @@ const Footer: React.FC = () => {
             <img src="logo.png" alt="Krabel Musicals" className="h-16 w-auto brightness-200" />
           </div>
           <p className="text-gray-400 max-w-sm mb-8 font-noto">
-            Raising godly and skilled musicians. Dedicated to excellence in music education and community service in Port Harcourt for over a decade.
+            Raising confident, excellent, and godly musicians. Dedicated to excellence in music education and community service in Port Harcourt for over a decade.
           </p>
           <div className="flex gap-4">
-             <div className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white cursor-pointer transition-all">
-               <span className="material-symbols-outlined text-xl">share</span>
-             </div>
-             <div className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white cursor-pointer transition-all">
-               <span className="material-symbols-outlined text-xl">public</span>
-             </div>
+            <a href="https://youtube.com/@krabelmusicals9930" target="_blank" rel="noopener noreferrer me" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" aria-label="YouTube - Krabel Musicals"><span className="material-symbols-outlined text-xl">smart_display</span></a>
+            <a href="https://www.facebook.com/share/1BicmudxNr/" target="_blank" rel="noopener noreferrer me" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" aria-label="Facebook - Krabel Musicals"><span className="material-symbols-outlined text-xl">share</span></a>
+            <a href="https://www.instagram.com/krabelmusicals" target="_blank" rel="noopener noreferrer me" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" aria-label="Instagram - Krabel Musicals"><span className="material-symbols-outlined text-xl">photo_camera</span></a>
+            <a href="https://www.linkedin.com/in/temitope-elizabeth-omowumi-89218a124" target="_blank" rel="noopener noreferrer me" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" aria-label="LinkedIn - Krabel Musicals"><span className="material-symbols-outlined text-xl">work</span></a>
+            <a href="https://www.tiktok.com/@krabelmusicals" target="_blank" rel="noopener noreferrer me" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" aria-label="TikTok - Krabel Musicals"><span className="material-symbols-outlined text-xl">music_note</span></a>
           </div>
         </div>
         <div>
@@ -124,15 +123,15 @@ const Footer: React.FC = () => {
           <ul className="space-y-4 text-sm text-gray-400 font-noto">
             <li className="flex items-start gap-3">
               <span className="material-symbols-outlined text-primary">location_on</span>
-              <span>123 Music Avenue, GRA Phase 2<br/>Port Harcourt, Nigeria</span>
+              <span>Atilantic Events Hall, League Hotel<br/>Okilton Ada George, Port Harcourt, Nigeria</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="material-symbols-outlined text-primary">call</span>
-              <span>+234 800 123 4567</span>
+              <a href="tel:+2348139391925" className="hover:text-primary transition-colors">+234 813 939 1925</a>
             </li>
             <li className="flex items-center gap-3">
               <span className="material-symbols-outlined text-primary">mail</span>
-              <span>hello@krabelmusicals.com</span>
+              <a href="mailto:krabel247@gmail.com" className="hover:text-primary transition-colors">krabel247@gmail.com</a>
             </li>
           </ul>
         </div>

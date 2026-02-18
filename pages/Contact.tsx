@@ -18,10 +18,10 @@ const Contact: React.FC = () => {
         {/* Contact Information Grid */}
         <div className="w-full px-4 py-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0 border-t border-border-light">
-            <ContactInfoItem icon="location_on" label="Address" val="123 Music Avenue, GRA Phase 2" sub="Port Harcourt, Nigeria" />
-            <ContactInfoItem icon="call" label="Phone" val="+234 800 123 4567" sub="Mon-Sat, 9am - 6pm" />
-            <ContactInfoItem icon="mail" label="Email" val="hello@krabelmusicals.com" sub="For general inquiries and support" isLink />
-            <ContactInfoItem icon="share" label="Socials" val="@krabelmusicals" sub="Instagram • Twitter • Facebook" />
+            <ContactInfoItem icon="location_on" label="Address" val="Atilantic Events Hall, League Hotel" sub="Okilton Ada George, Port Harcourt, Nigeria" />
+            <ContactInfoItem icon="call" label="Phone" val="+234 813 939 1925" sub="Mon-Sat, 9am - 6pm" isPhone />
+            <ContactInfoItem icon="mail" label="Email" val="krabel247@gmail.com" sub="For general inquiries and support" isLink />
+            <ContactInfoItem icon="share" label="Socials" val="YouTube • Facebook • Instagram • LinkedIn • TikTok" sub="Follow us for updates and student performances" />
           </div>
         </div>
 
@@ -54,26 +54,32 @@ const Contact: React.FC = () => {
                 See the progress of our students and behind-the-scenes content on our YouTube and TikTok channels.
               </p>
             </div>
-            <a className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background-light text-text-light font-bold hover:bg-border-light transition-colors shrink-0" href="#">
-              <span>Visit Channels</span>
-              <span className="material-symbols-outlined text-lg">arrow_forward</span>
-            </a>
+            <div className="flex flex-wrap gap-3 shrink-0">
+              <a className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-bold hover:bg-primary-dark transition-colors" href="https://youtube.com/@krabelmusicals9930" target="_blank" rel="noopener noreferrer">
+                <span className="material-symbols-outlined text-lg">smart_display</span> YouTube
+              </a>
+              <a className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background-light text-text-light font-bold hover:bg-border-light transition-colors" href="https://www.tiktok.com/@krabelmusicals" target="_blank" rel="noopener noreferrer">
+                <span className="material-symbols-outlined text-lg">music_note</span> TikTok
+              </a>
+              <a className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background-light text-text-light font-bold hover:bg-border-light transition-colors" href="https://www.instagram.com/krabelmusicals" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a className="flex items-center gap-2 px-6 py-3 rounded-lg bg-background-light text-text-light font-bold hover:bg-border-light transition-colors" href="https://www.facebook.com/share/1BicmudxNr/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
           </div>
         </div>
 
         {/* Careers Section */}
-        <div className="w-full px-4 py-16">
+        <div id="careers" className="w-full px-4 py-16 scroll-mt-24">
           <div className="flex flex-col gap-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-border-light pb-8">
               <div className="flex flex-col gap-4 max-w-[720px]">
                 <h2 className="text-text-light text-3xl font-bold leading-tight tracking-tight">Join Our Team</h2>
                 <p className="text-text-muted text-lg font-noto leading-relaxed">
-                  We are always looking for talented music instructors to join our faculty. If you are passionate about teaching piano, violin, guitar, or voice, we want to hear from you.
+                  We are always looking for talented music instructors to join our faculty. If you are passionate about teaching keyboard, violin, vocals, or other instruments, we want to hear from you. We also create employment opportunities for young music instructors.
                 </p>
               </div>
-              <button className="h-12 px-8 rounded-lg bg-primary text-white font-bold transform hover:scale-105 transition-all shadow-lg shadow-primary/30 shrink-0">
+              <a href="#careers" className="h-12 px-8 rounded-lg bg-primary text-white font-bold transform hover:scale-105 transition-all shadow-lg shadow-primary/30 shrink-0 flex items-center justify-center">
                 Apply via Job Portal
-              </button>
+              </a>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               <CareerCard icon="favorite" title="Passionate Environment" text="Work with dedicated students and a supportive team of music lovers." />
@@ -87,7 +93,7 @@ const Contact: React.FC = () => {
   );
 };
 
-const ContactInfoItem: React.FC<{ icon: string; label: string; val: string; sub: string; isLink?: boolean }> = ({ icon, label, val, sub, isLink }) => (
+const ContactInfoItem: React.FC<{ icon: string; label: string; val: string; sub: string; isLink?: boolean; isPhone?: boolean }> = ({ icon, label, val, sub, isLink, isPhone }) => (
   <div className="flex flex-col gap-1 py-6 border-b border-border-light">
     <div className="flex items-center gap-2 mb-1">
       <span className="material-symbols-outlined text-primary text-xl">{icon}</span>
@@ -95,6 +101,8 @@ const ContactInfoItem: React.FC<{ icon: string; label: string; val: string; sub:
     </div>
     {isLink ? (
       <a className="text-text-light text-lg font-medium hover:text-primary transition-colors" href={`mailto:${val}`}>{val}</a>
+    ) : isPhone ? (
+      <a className="text-text-light text-lg font-medium hover:text-primary transition-colors" href={`tel:${val.replace(/\s/g, '')}`}>{val}</a>
     ) : (
       <p className="text-text-light text-lg font-medium">{val}</p>
     )}

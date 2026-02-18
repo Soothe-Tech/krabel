@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   return (
@@ -18,30 +19,30 @@ const About: React.FC = () => {
                 Celebrating 10 Years of Musical Excellence
               </h1>
               <p className="text-white/90 text-lg font-normal leading-relaxed font-noto">
-                From humble beginnings to Port Harcourt's premier music hub, discover the story behind Krabel Musicals. A decade of nurturing talent and building community.
+                A music education and creative academy dedicated to raising skilled, disciplined, and purpose-driven musicians. For over ten years we have been discovering, nurturing, and developing musical talents through structured education, practical training, mentorship, and performance opportunities.
               </p>
             </div>
-            <button className="z-10 h-12 px-8 rounded-lg bg-primary text-white font-bold transition-transform hover:scale-105 shadow-xl">
+            <a href="#mission" className="z-10 h-12 px-8 rounded-lg bg-primary text-white font-bold transition-transform hover:scale-105 shadow-xl flex items-center justify-center">
               Read Our Story
-            </button>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Mission Section */}
-      <section className="w-auto px-4 md:px-10 py-16">
+      <section id="mission" className="w-auto px-4 md:px-10 py-16 scroll-mt-24">
         <div className="mx-auto max-w-[1200px] flex flex-col gap-10">
           <div className="flex flex-col gap-4 max-w-[720px]">
             <span className="text-primary font-bold tracking-wider uppercase text-sm">Our Purpose</span>
             <h2 className="text-text-light text-3xl font-bold leading-tight md:text-4xl">Our Mission</h2>
             <p className="text-text-muted text-lg font-normal leading-relaxed font-noto">
-              Raising confident, excellent, and godly musicians through dedicated mentorship and world-class training. We create an environment where creativity flourishes alongside character.
+              Our mission is to raise confident, excellent, and godly musicians. Beyond being a business, we operate with a strong philanthropic vision—providing access to music education for underprivileged children while creating employment opportunities for young music instructors.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <AboutCard icon="mic" title="Confidence" text="Empowering students to perform boldly on any stage, overcoming stage fright through regular recitals." />
             <AboutCard icon="emoji_events" title="Excellence" text="Striving for mastery in every note and technique, guided by certified professional instructors." />
-            <AboutCard icon="volunteer_activism" title="Values" text="Instilling character, integrity, and godly principles alongside technical musical skill." />
+            <AboutCard icon="volunteer_activism" title="Values" text="Instilling character, integrity, and godly principles alongside technical musical skill. Strong focus on children and youth development." />
           </div>
         </div>
       </section>
@@ -74,9 +75,9 @@ const About: React.FC = () => {
                 We believe in the power of music to transform lives beyond the classroom. Our philanthropic initiatives support underprivileged children and provide employment for skilled instructors.
               </p>
             </div>
-            <button className="h-12 px-8 rounded-lg bg-primary text-white font-bold shadow-lg shadow-primary/20 shrink-0 transform hover:scale-105 transition-all">
+            <Link to="/contact" className="h-12 px-8 rounded-lg bg-primary text-white font-bold shadow-lg shadow-primary/20 shrink-0 transform hover:scale-105 transition-all flex items-center justify-center">
               Support Our Cause
-            </button>
+            </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ImpactCard 
@@ -90,6 +91,22 @@ const About: React.FC = () => {
               desc="Building a sustainable career path for talented music instructors in our community, fostering a local economy of creativity." 
             />
           </div>
+        </div>
+      </section>
+
+      {/* Partnerships & Sponsorships */}
+      <section className="bg-white py-16 px-4 md:px-10">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="flex flex-col gap-4 max-w-[720px] mb-10">
+            <span className="text-primary font-bold tracking-wider uppercase text-sm">Get Involved</span>
+            <h2 className="text-text-light text-3xl font-bold leading-tight md:text-4xl">Partnerships & Community Impact</h2>
+            <p className="text-text-muted text-lg font-noto">
+              We welcome partnerships and sponsorships to expand our reach. Together we can provide more access to music education for underprivileged children and create more employment opportunities for young music instructors in Port Harcourt.
+            </p>
+          </div>
+          <Link to="/contact" className="inline-flex h-12 px-8 rounded-lg bg-primary text-white font-bold hover:bg-primary-dark transition-colors items-center justify-center w-fit">
+            Partner With Us
+          </Link>
         </div>
       </section>
     </div>
